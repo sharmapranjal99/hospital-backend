@@ -11,6 +11,10 @@ connectDB();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Hospital Backend API Running");
+});
+
 app.use("/api", patientRoutes);
 
 const PORT = process.env.PORT || 5000;
